@@ -129,6 +129,16 @@ Accessibility (required) and Screen Recording (optional) when asked. An ad-hoc
 signature changes on every build, so macOS may ask for these permissions again
 after you rebuild.
 
+For repeated builds, sign both Ice and its XPC service with the same Apple
+Development identity instead of `CODE_SIGN_IDENTITY=-`. Set `DEVELOPMENT_TEAM`
+to the certificate's Team Identifier. When replacing an upstream-signed Ice,
+reset only this app's old permissions, then grant them again in System Settings:
+
+```sh
+tccutil reset Accessibility com.jordanbaird.Ice
+tccutil reset ScreenCapture com.jordanbaird.Ice
+```
+
 ## Unit tests
 
 The decision logic has standalone tests that build with `swiftc`:
