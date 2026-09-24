@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+    <channel>
+        <title>Ice fork updates</title>
+        <link>https://github.com/snowman0919/Ice/releases</link>
+        <description>Signed updates for the snowman0919 Ice fork.</description>
+    </channel>
+</rss>
